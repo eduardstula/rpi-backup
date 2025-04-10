@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # === NASTAVENÍ ===
-NAS_SERVER="192.168.0.16"
-NAS_SHARE="backup_rpi"       # relativní cesta na NASu
-NAS_MOUNT="/mnt/backup"
-NAS_USER="rpi-backup"
-NAS_PASS="t83Q0hBnnAyvk5nP9Vw8"
+NAS_SERVER="192.168.0.10" # IP address of your NAS server
+NAS_SHARE="rpi-backup" # Name of the shared folder on the NAS
+NAS_USER="" # Username for NAS access
+NAS_PASS="" # Password for NAS access
 DISK_DEVICE="/dev/mmcblk0"     # nebo např. /dev/sda pro SSD
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 BACKUP_FILE="$NAS_MOUNT/rpi1-$DATE.img.gz"
