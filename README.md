@@ -36,21 +36,21 @@ There are several methods to back up a Raspberry Pi to a NAS. This script uses t
 ### 1. download the script from the repository:
 
 ```bash
-curl -L https://raw.githubusercontent.com/yourusername/rpi-backup-dd/main/rpi-backup-dd.sh -o rpi-backup-dd.sh
+curl -L https://raw.githubusercontent.com/eduardstula/rpi-backup/refs/heads/main/backup.sh -o backup.sh
 ```
 or download the file manually from the repository.
 
-Copy the script to your Raspberry Pi, for example to `~/rpi-backup-dd.sh`.
+Copy the script to your Raspberry Pi, for example to `~/backup.sh`.
 
 Make it executable:
 ```bash
-chmod +x ~/rpi-backup-dd.sh
+chmod +x ~/backup.sh
 ```
 ### 2. Configure the script
 Edit the script to set your NAS share details and backup preferences. Open the script in a text editor:
 
 ```bash
-nano ~/rpi-backup-dd.sh
+nano ~/backup.sh
 ```
 Set the following variables in the script to match your NAS configuration:
 
@@ -71,7 +71,7 @@ You can run the script manually or set it up as a cron job for automatic backups
 To run the script manually, execute the following command:
 
 ```bash
-sudo ~/rpi-backup-dd.sh
+sudo ~/backup.sh
 ```
 
 or automatically via cron job:
@@ -82,10 +82,10 @@ sudo crontab -e
 Add the following line to run the script every monday at 2 AM:
 
 ```bash
-0 2 * * 1 /path/to/rpi-backup-dd.sh
+0 2 * * 1 /path/to/backup.sh
 ```
 
-Make sure to replace `/path/to/rpi-backup-dd.sh` with the actual path to the script.
+Make sure to replace `/path/to/backup.sh` with the actual path to the script.
 
 ## View logs
 The script logs its activity to a log file located at `/var/log/rpi-backup-dd.log`. You can view the log file using:
